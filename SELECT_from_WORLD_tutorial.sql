@@ -65,7 +65,7 @@ Millions and billions
 */
 
 SELECT name, ROUND(population/1000000,2),ROUND(GDP/1000000000,2) FROM world 
-WHERE continent = 'South America'
+WHERE continent = 'South America';
 
 /* 10. Show the name and per-capita GDP for those countries with a GDP of at least one trillion (1000000000000; that is 12 zeros). 
 Round this value to the nearest 1000.
@@ -74,7 +74,7 @@ Show per-capita GDP for the trillion dollar countries to the nearest $1000.
 */
 
 SELECT name, ROUND(GDP/population,-3) FROM world 
-WHERE GDP > 1000000000000
+WHERE GDP > 1000000000000;
 
 /* 11. Greece has capital Athens.
 
@@ -87,7 +87,7 @@ You can use the LENGTH function to find the number of characters in a string
 
 SELECT name, capital
   FROM world
- WHERE LENGTH(name) = LENGTH(capital)
+ WHERE LENGTH(name) = LENGTH(capital);
 
 /* 12. The capital of Sweden is Stockholm. Both words start with the letter 'S'.
 
@@ -99,7 +99,7 @@ You can use <> as the NOT EQUALS operator.
 
 SELECT name, capital
 FROM world
-WHERE LEFT(name,1) = LEFT(capital,1) AND name <> capital
+WHERE LEFT(name,1) = LEFT(capital,1) AND name <> capital;
 
 /* 13. Equatorial Guinea and Dominican Republic have all of the vowels (a e i o u) in the name. 
 They don't count because they have more than one word in the name.
@@ -117,4 +117,4 @@ WHERE name LIKE '%a%'
   AND name LIKE '%i%'
   AND name LIKE '%o%'
   AND name LIKE '%u%'
-  AND name NOT LIKE '% %'
+  AND name NOT LIKE '% %';
