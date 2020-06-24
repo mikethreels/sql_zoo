@@ -111,3 +111,4 @@ JOIN stops stopd
   ON (d.stop=stopd.id)
 WHERE stopa.name='Craiglockhart' AND stopd.name = 'Lochend' AND stopb.name = stopc.name;
 
+/*I wasn't able to figure this one out by myself*/
